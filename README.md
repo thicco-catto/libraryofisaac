@@ -14,6 +14,6 @@ VSCode extension:
 
 https://marketplace.visualstudio.com/items?itemName=ThiccoCatto.library-of-isaac-dev-extension
 
-Documentation for the library:
+Documentation for the library: a
 
 https://team-compliance.gitbook.io/library-of-isaac/
