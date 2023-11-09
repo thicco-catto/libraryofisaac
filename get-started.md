@@ -10,16 +10,29 @@ Go to Visual Studio Code, search for `Library of Isaac` and download the extensi
 
 The extension adds 2 new commands to VSCode.
 
-* `Init Isaac Project`: Adds the emmy lua annotations, allowing you to use autocomplete (For the autocomplete to work properly you need to install the [Lua extension](https://marketplace.visualstudio.com/items?itemName=sumneko.lua) and the [Binding of Isaac Lua API extension](https://marketplace.visualstudio.com/items?itemName=Filloax.isaac-lua-api-vscode))
-* `Build Isaac Project`: Creates all the necessary library files to your project. The first time you use it, it will create a default folder for the library, which you should rename to something unique.
+* `Init Library of Isaac Project`: Sets up the project so autocomplete works properly. Adds the luadocs file and makes it ignore the library files, if they're there.
 
-### 2. Manually download the library
+{% hint style="warning" %}
+&#x20;(For the autocomplete to work properly you need to install the [Lua extension](https://marketplace.visualstudio.com/items?itemName=sumneko.lua) and the [Binding of Isaac Lua API extension](https://marketplace.visualstudio.com/items?itemName=Filloax.isaac-lua-api-vscode))
+{% endhint %}
 
-Go to the GitHub repo [here ](https://github.com/Team-Compliance/libraryofisaac)and download the latest version. Note that if you're gonna take this approach you will have to manually remove the unnecessary files if you want to minimize the size of your mod.
+* `Build Library of Isaac Project`: Analyses your mod workspace and trims the library so it can keep only the necessary files.
+
+For more information on using the extension, check the [Using the Extension](broken-reference) page.
+
+### 2. Downloading the library as a git submodule
+
+If you're using git in your mod, you can download the library repository as a submodule. This makes updating the library to the latest version incredibly easy. It's recommended to add the library to your project this way, even if you're using the extension, to ensure you have the latest version.
+
+Check out how to use submodules [here](https://github.blog/2016-02-01-working-with-submodules/).
+
+### 3. Manually download the library
+
+Go to the GitHub repo [here ](https://github.com/Team-Compliance/libraryofisaac)and download the latest version.
 
 When putting the library in your mod, you should rename the folder it is in to something unique, to avoid mod compatibility issues.
 
-### 3. Require the Library of Isaac mod in the workshop
+### 4. Require the Library of Isaac mod in the workshop
 
 If you want your mod to be as lightweight as possible you can also make your mod require the user to also have the Library of Isaac workshop mod. This of course introduces an inconvenience for the user and may cause some problems where the user simply didn't install the Library of Isaac mod.
 
