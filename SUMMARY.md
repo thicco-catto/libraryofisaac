@@ -2,6 +2,8 @@
 
 * [Library of Isaac](README.md)
 * [Get Started](get-started.md)
+* [Using the Extension](using-the-extension.md)
+* [Contributing to the Library](contributing-to-the-library.md)
 * [F.A.Q.](f.a.q..md)
 * [Custom Enums](custom-enums/README.md)
   * [AmbushType](custom-enums/ambushtype.md)
