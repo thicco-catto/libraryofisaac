@@ -1,9 +1,9 @@
 # Contributing to the Library
 
-So you want to contribute to the library, either by adding your own enums, functions or even callbacks. Well, this page will explain what you need to do.
+If you want to contribute to the library, either by adding your own enums, functions or even callbacks, this page will explain everything you need to know beforehand.
 
 {% hint style="info" %}
-This page you already have some familiarity with github and vscode
+This page assumes you already have some familiarity with github and vscode
 {% endhint %}
 
 ### Installing the extension
@@ -12,9 +12,13 @@ To ease with developing, you'll want to install the `Library Of Isaac Dev Extens
 The commands this extension adds are:
 
 * `Create Scripts`: Generates the `scripts.lua` file, which contains a list of all the files in the library so they can be required later.
-* `Create Modules File`: Generates the `modules.lua` file, which declares every module in the library, so the autocomplete works properly.
+* `Create Dependencies File`: Generates the `dependencies.json` file, which contains information about what features each function and callback requires. This is used by the regular extension.
 * `Create Docs File`: Generates the `docs.lua` file, which contains all the function declarations and enums. This is used by the regular extension and by the next command.
-* `Create GitBook`: Generates the gitbook docs from the `docs.lua` file. This is only meant to be used in the `docs` branch.
+* `Create GitBook Docs`: Generates the gitbook docs from the `docs.lua` file. This is only meant to be used in the `docs` branch.
+
+The `Create Scripts` command should be run every time a file is created or removed so the library can require it and it actually gets executed.
+
+The `Create Dependencies File` and the `Create Docs File` should be run once you finish coding the new features.
 
 ### Forking the repository
 
@@ -26,7 +30,7 @@ After that you can make any changes to your copy of your library.
 
 ### Creating a pull request
 
-Once you're done changing the library,  you need to merge your copy with the main repository.
+Once you're done changing the library, you need to merge your copy with the main repository.
 
 To do that go to your repository and click on `Contribute` button and click on `Open Pull Request`.
 
@@ -46,7 +50,7 @@ To make sure your changes get accepted you will need to follow a set of rules.
 
 ### Keep things separate
 
-Each file should only have directly related functions. \
+Each file should only have directly related functions.\
 You should not put a function to check if the player is the lost in the same file you put another function that gives the player full health.
 
 ### Don't be too specific
@@ -97,7 +101,7 @@ To create a callback, first you need to add an entry for it in the `CustomCallba
 
 Then you'll need to register it using `TSIL.__RegisterCustomCallback()`.
 
-You should only ever register one callback per file.
+You can only register one callback per file.
 
 ### Callback and `use` comments
 
